@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/hiroshi/git-pr-release.git
-  revision: 400e27852e2ccee02eccc972df9e4b390acbb5c6
+  revision: ec2c8d9e32a6086366884e341154be3958d6d07c
   branch: create_release
   specs:
     git-pr-release (0.1.2)

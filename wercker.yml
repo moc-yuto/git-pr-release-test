@@ -1,0 +1,16 @@
+box: wercker/default
+build:
+  steps:
+    - script:
+        name: hello
+        code: echo hello build
+
+deploy:
+  steps:
+    - script:
+        name: hello deploy
+        code: echo hello deploy $WERCKER_DEPLOYTARGET_NAME
+  after-steps:
+    - script:
+        name: create github release
+        code: GIT_PR_RELEASE_TOKEN=$GITHUB_TOKEN; if [ $WERCKER_DEPLOYTARGET_NAME = production ]; then bundle exec git-pr-release --release; fi

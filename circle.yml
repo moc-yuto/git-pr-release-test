@@ -5,6 +5,7 @@ machine:
 test:
   override:
     - echo test
+    - bundle exec git-pr-release --release
 
 deployment:
   staging:
@@ -15,4 +16,4 @@ deployment:
     branch: production
     commands:
       - echo production
-      - echo git-pr-release
+      - bundle exec git-pr-release --release

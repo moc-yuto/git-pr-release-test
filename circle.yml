@@ -3,7 +3,7 @@ machine:
     Asia/Tokyo
 
 test:
-  commands:
+  override:
     - echo test
 
 deployment:
@@ -11,10 +11,8 @@ deployment:
     branch: /(deploy\/.*|master)/
     commands:
       - echo staging
-
   production:
     branch: production
     commands:
       - echo production
-    post:
       - echo git-pr-release

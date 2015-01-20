@@ -5,7 +5,6 @@ machine:
 test:
   override:
     - echo test
-    - GIT_PR_RELEASE_TOKEN=$GITHUB_TOKEN bundle exec git-pr-release --release
 
 deployment:
   staging:
@@ -16,4 +15,5 @@ deployment:
     branch: production
     commands:
       - echo production
-      - bundle exec git-pr-release --release
+      - GIT_PR_RELEASE_TOKEN=$GITHUB_TOKEN bundle exec git-pr-release --release
+

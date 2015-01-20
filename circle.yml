@@ -1,0 +1,20 @@
+machine:
+  timezone:
+    Asia/Tokyo
+
+test:
+  commands:
+    - echo test
+
+deployment:
+  staging:
+    branch: /(deploy\/.*|master)/
+    commands:
+      - echo staging
+
+  production:
+    branch: production
+    commands:
+      - echo production
+    post:
+      - echo git-pr-release

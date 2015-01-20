@@ -1,0 +1,19 @@
+machine:
+  timezone:
+    Asia/Tokyo
+
+test:
+  override:
+    - echo test
+
+deployment:
+  staging:
+    branch: /(deploy\/.*|master)/
+    commands:
+      - echo staging
+  production:
+    branch: production
+    commands:
+      - echo production
+      - GIT_PR_RELEASE_TOKEN=$GITHUB_TOKEN bundle exec git-pr-release --release
+

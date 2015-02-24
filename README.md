@@ -4,3 +4,5 @@ git-pr-release の挙動確認
 ブランチ b
 ブランチ c
 branch d
+
+release.name が pull.title になるかテスト

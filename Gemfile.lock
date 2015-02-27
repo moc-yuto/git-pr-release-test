@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/hiroshi/git-pr-release.git
-  revision: ec2c8d9e32a6086366884e341154be3958d6d07c
+  revision: 46cf9a355b93ec72d3db7bbc9a85e1a47b170a73
   branch: create_release
   specs:
     git-pr-release (0.1.2)
@@ -12,12 +12,12 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.3.6)
+    addressable (2.3.7)
     colorize (0.7.5)
     diff-lcs (1.2.5)
     faraday (0.9.1)
       multipart-post (>= 1.2, < 3)
-    highline (1.6.21)
+    highline (1.7.1)
     multipart-post (2.0.0)
     octokit (2.7.2)
       sawyer (~> 0.5.2)

@@ -1,3 +1,5 @@
 [pr-release "branch"]
   production = production
   staging = master
+[pr-release "release"]
+  tag = pull.title

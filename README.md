@@ -6,3 +6,5 @@ git-pr-release の挙動確認
 branch d
 
 release.name が pull.title になるかテスト
+
+release tag を pull.title にするテスト

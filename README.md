@@ -1,10 +1,5 @@
-git-pr-release の挙動確認
+git-pr-release-test
+===================
+git-pr-release --release の挙動確認リポジトリ
 
-ブランチ a
-ブランチ b
-ブランチ c
-branch d
-
-release.name が pull.title になるかテスト
-
-release tag を pull.title にするテスト
+production にマージすると、 [CircleCI](https://circleci.com/gh/hiroshi/git-pr-release-test) が自動的に `git-pr-release --release` を実行します。

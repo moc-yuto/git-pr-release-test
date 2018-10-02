@@ -1,27 +1,37 @@
 version: 2
 jobs:
-  build:
-    staging:
-      commands:
-        - echo staging
-    production:
-      commands:
-        - echo production
+  staging:
+    docker:
+      - image: circleci/golang:1.11
+    environment:
+      TZ: Asia/Tokyo
+    steps:
+      - checkout
+      - run: echo staging
+  production:
+    docker:
+      - image: circleci/golang:1.11
+    environment:
+      TZ: Asia/Tokyo
+    steps:
+      - checkout
+      - run:
+          command: |
+            echo production
 
 workflows:
   version: 2
-  build-deploy:
+  build:
     jobs:
       - staging:
-        filters:
-          branches:
-            only:
-              - develop
+          filters:
+            branches:
+              only:
+                - develop
       - production:
-        filters:
-          tags:
-            only: /v[0-9]+(\.[0-9]+)*/
-          branches:
-            ignore:
-              - master
+          filters:
+            tags:
+              only: /v[0-9]+(\.[0-9]+)*/
+            branches:
+              ignore: /.*/
   

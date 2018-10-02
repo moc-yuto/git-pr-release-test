@@ -1,7 +1,7 @@
 [pr-release]
   template = git-pr-release.erb
 [pr-release "branch"]
-  production = production
-  staging = master
+  production = master
+  staging = develop
 [pr-release "release"]
   tag = pull.title

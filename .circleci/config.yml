@@ -18,9 +18,8 @@ jobs:
       - run:
           command: |
             echo production
-            apt-get install ruby
-            gem install bundler
-            GIT_PR_RELEASE_TOKEN=$GITHUB_TOKEN bundle exec git-pr-release --release
+            LATEST_HASH=`git ls-remote origin develop | awk '{print $1}'`
+            git show $LATEST_HASH
 
 workflows:
   version: 2
